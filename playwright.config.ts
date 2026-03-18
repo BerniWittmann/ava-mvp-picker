@@ -8,7 +8,7 @@ export default defineConfig({
   workers: 1,
   reporter: [["html", { open: "never" }], ["list"]],
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL: "http://localhost:3000/ava-mvp-picker",
     trace: "on-first-retry",
   },
   projects: [
@@ -16,10 +16,6 @@ export default defineConfig({
       name: "chromium",
       use: {
         ...devices["Desktop Chrome"],
-        launchOptions: {
-          executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
-            "/root/.cache/ms-playwright/chromium-1194/chrome-linux/chrome",
-        },
       },
     },
   ],
