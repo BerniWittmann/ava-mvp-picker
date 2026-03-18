@@ -13,7 +13,7 @@ Gameday MVP voting app for a sports team. The coach passes a single phone around
 ## Commands
 
 ```bash
-npm run dev        # start dev server (http://localhost:3000/ava-mvp-picker)
+npm run dev        # start dev server (http://localhost:3000)
 npm run build      # static export to out/
 npm run lint       # ESLint
 npx playwright test              # run all e2e tests (requires dev server running)
@@ -53,8 +53,8 @@ e2e/                              # Playwright specs (players, game-setup, votin
 - **No running tally during voting** — `VotingBallot` receives only candidates, never vote counts. Results are only computed on the results page via `tallyVotes()`.
 - **HandoffScreen is not a route** — keeping ballot and handoff as local UI state prevents leaking voter identity via URL.
 - **Mounted guard on vote/results pages** — prevents redirect-to-home race condition before `useLocalStorage` hydrates from storage.
-- **basePath: /ava-mvp-picker** — Next.js adds this automatically to `Link href` and `router.push`. Do not prefix hrefs manually.
-- **Image src needs basePath prefix** — `next/image` with `unoptimized: true` does not auto-prefix public asset paths, so use `/ava-mvp-picker/ava-logo.png`.
+- **No basePath** — the app is served from the root of `https://ava-mvp.bernhardwittmann.com/`. Do not add a basePath prefix to hrefs.
+- **Image src** — use `/ava-logo.png` (no prefix needed).
 
 ## Branding
 
@@ -70,6 +70,6 @@ AVA ecosystem color palette (CSS variables in `globals.css`):
 
 ## Deployment
 
-Deploys to GitHub Pages at `https://berniwittmann.github.io/ava-mvp-picker/`.
+Deploys to `https://ava-mvp.bernhardwittmann.com/`.
 
 The `deploy.yml` workflow runs e2e tests first, then builds and deploys. Only triggers on pushes to `main`.

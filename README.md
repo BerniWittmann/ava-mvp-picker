@@ -24,7 +24,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000/ava-mvp-picker](http://localhost:3000/ava-mvp-picker) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Commands
 
@@ -37,8 +37,8 @@ Open [http://localhost:3000/ava-mvp-picker](http://localhost:3000/ava-mvp-picker
 
 ## Deployment
 
-The app is deployed to **GitHub Pages** at:
-`https://berniwittmann.github.io/ava-mvp-picker/`
+The app is deployed at:
+`https://ava-mvp.bernhardwittmann.com/`
 
 Two GitHub Actions workflows are included:
 

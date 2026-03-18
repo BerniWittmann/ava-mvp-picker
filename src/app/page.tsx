@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <div className="min-h-dvh px-4 py-12 max-w-lg mx-auto flex flex-col items-center">
       <div className="flex flex-col items-center gap-3 mb-10">
-        <Image src="/ava-mvp-picker/ava-logo.png" alt="AVA" width={72} height={72} className="rounded-2xl" />
+        <Image src="/ava-logo.png" alt="AVA" width={72} height={72} className="rounded-2xl" />
         <h1 className="text-3xl font-black text-[--ava-snow] tracking-tight">AVA MVP Picker</h1>
         <p className="text-sm uppercase tracking-widest" style={{ color: "var(--ava-ice)" }}>
           Gameday MVP Abstimmung
