@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const BASE = "/ava-mvp-picker";
+const BASE = "";
 
 test.beforeEach(async ({ page }) => {
   await page.goto(`${BASE}/players`);

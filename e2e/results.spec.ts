@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import type { Player, GameSession } from "../src/types";
 
-const BASE = "/ava-mvp-picker";
+const BASE = "";
 
 const mockPlayers: Player[] = [
   { id: "p1", name: "Alice", number: "1" },

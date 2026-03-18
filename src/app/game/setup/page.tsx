@@ -41,7 +41,7 @@ export default function GameSetupPage() {
             <path d="M19 12H5M12 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </Link>
-        <Image src="/ava-mvp-picker/ava-logo.png" alt="AVA" width={32} height={32} className="rounded-full" />
+        <Image src="/ava-logo.png" alt="AVA" width={32} height={32} className="rounded-full" />
         <h1 className="text-xl font-black text-[--ava-snow]">Wer ist heute dabei?</h1>
       </header>
 

@@ -40,7 +40,7 @@ export default function ResultsPage() {
   return (
     <div className="min-h-dvh px-4 py-8 max-w-lg mx-auto">
       <header className="flex items-center gap-3 mb-8">
-        <Image src="/ava-mvp-picker/ava-logo.png" alt="AVA" width={32} height={32} className="rounded-full" />
+        <Image src="/ava-logo.png" alt="AVA" width={32} height={32} className="rounded-full" />
         <h1 className="text-xl font-black text-[--ava-snow]">Ergebnis</h1>
         <span className="ml-auto text-sm" style={{ color: "var(--ava-ice)" }}>
           {new Date(session.date).toLocaleDateString("de-DE")}
