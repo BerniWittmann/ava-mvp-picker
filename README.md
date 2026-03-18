@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AVA MVP Picker
+
+Gameday MVP voting app for a sports team. After each game the coach passes their phone around the huddle — every present player votes for the MVP directly on that one device. No accounts, no per-player phones required.
+
+## Features
+
+- **Player roster** — manage players with name and optional jersey number
+- **Attendance** — mark who is present before each game day
+- **Pass-the-phone voting** — each player votes in turn; a handoff screen between voters prevents peeking at the ballot; no running tally is shown during the session
+- **Results** — winner banner with full vote counts; tie-aware
+- **Crash recovery** — if the browser is closed mid-session, a "Resume voting" banner appears on the home screen
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, TypeScript, static export)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- `localStorage` — all data persisted client-side, no backend needed
+- [Playwright](https://playwright.dev) — e2e test suite
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/ava-mvp-picker](http://localhost:3000/ava-mvp-picker) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server |
+| `npm run build` | Static export to `out/` |
+| `npm run lint` | Run ESLint |
+| `npx playwright test` | Run all e2e tests (requires dev server running) |
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The app is deployed to **GitHub Pages** at:
+`https://berniwittmann.github.io/ava-mvp-picker/`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Two GitHub Actions workflows are included:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`e2e.yml`** — runs Playwright tests on every push and pull request
+- **`deploy.yml`** — runs e2e tests, then builds and deploys to Pages on every push to `main`
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To enable GitHub Pages: go to _Settings → Pages_ and set the source to **GitHub Actions**.
