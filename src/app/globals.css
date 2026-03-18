@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --ava-snow: #f6fbff;
+  --ava-ice: #76a8d3;
+  --ava-ice-bright: #9bc3e5;
+  --ava-night: #0a1320;
+  --ava-steel: #1a2635;
+}
+
+body {
+  background-color: var(--ava-night);
+  color: var(--ava-snow);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+  background-image:
+    radial-gradient(ellipse at top left, rgba(118, 168, 211, 0.22) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(155, 195, 229, 0.16) 0%, transparent 50%);
+  background-attachment: fixed;
+}
